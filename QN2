@@ -1,0 +1,9 @@
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+
+class BankAccount: def __init__(self, account_number, balance=0): self.account_number = account_number self.balance = balance def deposit(self, amount): self.balance += amount print(f"Depositing {amount}")
+def withdraw(self, amount):
+if amount <= self.balance: self.balance -= amount print(f"Withdrawing {amount}") else: print("Error: Insufficient funds.")
+def get_balance(self): print(f"Current balance: {self.balance}") return self.balance
+# Test the BankAccount class account = BankAccount("123456789")
+account.deposit(5000) account.withdraw(2000) account.get_balance() 

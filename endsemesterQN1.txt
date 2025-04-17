@@ -1,0 +1,13 @@
+Python 3.13.2 (tags/v3.13.2:4f8bb39, Feb  4 2025, 15:23:48) [MSC v.1942 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> python
+... CopyEdit
+... def calculate_salary(hourly_rate, hours_worked, tax_rate=0.15): """ Calculates the net salary after tax deductions. Parameters: hourly_rate (float):
+... Rate per hour. hours_worked (float):
+... Total hours worked. tax_rate (float):
+... Tax percentage to deduct (default is 15%).
+... Returns: float: Net salary after tax. """ gross_salary = hourly_rate * hours_worked tax_amount = gross_salary * tax_rate net_salary = gross_salary - tax_amount return net_salary # Main program try: hourly_rate = float(input("Enter hourly rate: "))
+... hours_worked = float(input("Enter hours worked: "))
+... if hourly_rate < 0 or hours_worked < 0: print("Hourly rate and hours worked must be non-negative.")
+... else: net_salary = calculate_salary(hourly_rate, hours_worked) print(f"Net Salary: {net_salary:,.0f}")
+... except ValueError: print("Please enter valid numeric inputs.") 
